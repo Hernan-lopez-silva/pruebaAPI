@@ -13,6 +13,6 @@ export class ApiPeliculasService {
   constructor() { }
 
   obtenerPeliculas(){
-    this.http.get<any>(this.url);
+    return this.http.get<any>(this.url);
   }
 }
