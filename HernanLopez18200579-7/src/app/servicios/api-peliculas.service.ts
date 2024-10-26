@@ -8,9 +8,7 @@ import { inject } from '@angular/core';
 export class ApiPeliculasService {
 
   http = inject(HttpClient);
-  private readonly url = "https://lightgrey-owl-901213.hostingersite.com/api/get_peliculas.php?limit=100"
-
-  constructor() { }
+  private readonly url = "https://lightgrey-owl-901213.hostingersite.com/api/get_peliculas.php?limit=100";
 
   obtenerPeliculas(){
     return this.http.get<any>(this.url);

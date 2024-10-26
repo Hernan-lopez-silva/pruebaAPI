@@ -19,8 +19,8 @@ export class HomePage implements OnInit {
 
     if(peliculasLocalStorage !== null){
 
-      localStorage = JSON.parse(peliculasLocalStorage)
-      
+      localStorage = JSON.parse(peliculasLocalStorage);
+
     }
 
     this.apiPeliculas.obtenerPeliculas().subscribe((
