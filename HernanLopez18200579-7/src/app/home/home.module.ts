@@ -5,6 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiPeliculasService } from '../servicios/api-peliculas.service';
 
 
 @NgModule({
@@ -12,8 +14,10 @@ import { HomePageRoutingModule } from './home-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    HttpClientModule
   ],
-  declarations: [HomePage]
+  declarations: [HomePage],
+  providers: [ApiPeliculasService]
 })
 export class HomePageModule {}
