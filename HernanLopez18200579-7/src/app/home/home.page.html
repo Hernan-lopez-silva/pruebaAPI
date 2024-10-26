@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Películas
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div>
+    <ion-row>
+      @for (pelicula of listaPeliculas; track pelicula.id) {
+        <ion-col size="2">
+          <ion-card>
+            <img alt="" src="{{pelicula.poster_path}}" />
+            <ion-card-header>
+              <ion-card-title>Titulo: {{pelicula.title}}</ion-card-title>
+              <ion-card-subtitle>Precio: ${{pelicula.price}}</ion-card-subtitle>
+            </ion-card-header>
+          
+            <ion-card-content>
+              Popularidad: {{pelicula.popularity}}
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      }
+    </ion-row>
   </div>
 </ion-content>

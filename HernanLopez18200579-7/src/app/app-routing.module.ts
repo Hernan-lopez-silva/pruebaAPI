@@ -11,10 +11,6 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
-  {
-    path: 'venta',
-    loadChildren: () => import('./venta/venta.module').then( m => m.VentaPageModule)
-  },
 ];
 
 @NgModule({
